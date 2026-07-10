@@ -1,0 +1,119 @@
+{
+  "school_year": "2026-2027",
+  "term": 3,
+  "subjects": [
+    {
+      "name": "Mathematics",
+      "code": "MATH6",
+      "content_standards": [
+        {
+          "description": "The learners should have knowledge and understanding of parts of a circle, including circumference.",
+          "performance_standards": [
+            {
+              "description": "The learners are able to describe the parts of a circle and determine its circumference.",
+              "competencies": [
+                {
+                  "description": "Draw circles with different radii using a pair of compasses."
+                },
+                {
+                  "description": "Identify and describe the parts of a circle."
+                },
+                {
+                  "description": "Measure the circumference of circles using appropriate tools."
+                },
+                {
+                  "description": "Approximate the value of pi (π), the ratio of the circumference to the diameter."
+                },
+                {
+                  "description": "Find the circumference of a circle using C = πd or C = 2πr."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "description": "The learners should have knowledge and understanding of area of a circle.",
+          "performance_standards": [
+            {
+              "description": "The learners are able to determine the area of a circle and solve related problems.",
+              "competencies": [
+                {
+                  "description": "Explore inductively the area of a circle leading to the formula A = πr²."
+                },
+                {
+                  "description": "Find the area of a circle using the formula."
+                },
+                {
+                  "description": "Solve problems involving the circumference and area of circles."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "description": "The learners should have knowledge and understanding of composite figures composed of any two or more of: triangle, square, rectangle, circle, and semi-circle.",
+          "performance_standards": [
+            {
+              "description": "The learners are able to determine the area of composite figures and solve related problems.",
+              "competencies": [
+                {
+                  "description": "Find the area of composite figures composed of any two or more of the following: triangle, square, rectangle, circle, and semicircle."
+                },
+                {
+                  "description": "Solve problems involving circumference and area of composite figures."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "description": "The learners should have knowledge and understanding of pie graphs.",
+          "performance_standards": [
+            {
+              "description": "The learners are able to construct, interpret, and analyze pie graphs.",
+              "competencies": [
+                {
+                  "description": "Find the angle measures and/or percentages based on the given data for a pie graph."
+                },
+                {
+                  "description": "Construct a pie graph using appropriate tools."
+                },
+                {
+                  "description": "Interpret data presented in a pie graph."
+                },
+                {
+                  "description": "Interpret data from digital media that are presented in tabular or graphical form."
+                },
+                {
+                  "description": "Draw conclusions or make inferences based on data presented in a pie graph."
+                },
+                {
+                  "description": "Solve problems using data presented in a pie graph."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "description": "The learners should have knowledge and understanding of common factors, greatest common factors, common multiples, and least common multiples.",
+          "performance_standards": [
+            {
+              "description": "The learners are able to determine common factors, greatest common factors (GCF), common multiples, least common multiples (LCM), and solve related problems.",
+              "competencies": [
+                {
+                  "description": "Determine the common factors and the greatest common factor (GCF) of two numbers using listing, prime factorization, and continuous division."
+                },
+                {
+                  "description": "Find the common multiples and least common multiple (LCM) of two numbers using listing, prime factorization, and continuous division."
+                },
+                {
+                  "description": "Solve problems involving GCF and LCM."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
