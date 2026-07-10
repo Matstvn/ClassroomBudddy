@@ -12,6 +12,8 @@ import app.api.v1.endpoints.assessment_subtypes as assessment_subtypes
 import app.api.v1.endpoints.grades as grades
 import app.api.v1.endpoints.curriculum as curriculum
 import app.api.v1.endpoints.learning_objectives as learning_objectives
+import app.api.v1.endpoints.reading as reading
+
 
 
 
@@ -67,6 +69,12 @@ app.include_router(
     curriculum.router,
     prefix=f"{settings.API_V1_PREFIX}/curriculum",
     tags=["curriculum"]
+)
+
+app.include_router(
+    reading.router,
+    prefix=f"{settings.API_V1_PREFIX}/reading",
+    tags=["reading"]
 )
 
 app.include_router(

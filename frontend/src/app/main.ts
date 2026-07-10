@@ -5,6 +5,8 @@ import { renderGradeEntryPage } from '../modules/grades/pages/grade-entry-page';
 import { renderComputedGradesPage } from '../modules/grades/pages/computed-grade-page';
 import { renderMonitoringPage } from '../modules/classroom/pages/monitoring-page';
 import { renderDailyLogPage } from '../modules/daily-log/pages/daily-log-pages';
+import { renderReadingPage } from '../modules/reading/pages/reading-page';
+
 
 const layout = new MainLayout();
 const app = document.getElementById('app')!;
@@ -27,6 +29,9 @@ function route() {
       content.appendChild(renderComputedGradesPage());
     } else if (hash === '/classroom') {
       content.appendChild(renderMonitoringPage());
+    } // Inside your route function:
+    else if (hash === '/reading') {
+    content.appendChild(renderReadingPage());
     } else {
       content.innerHTML = '<div class="p-8 text-gray-500">Page not found.</div>';
     }

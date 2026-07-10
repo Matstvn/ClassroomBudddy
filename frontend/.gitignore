@@ -1,35 +1,19 @@
+# .gitignore (Root or Backend)
+
 # Python
-__pycache__/
-*.py[cod]
-*.pyo
-*.pyd
-*.env
-.env
 venv/
-educ/
-env/
-*.egg-info/
-dist/
-build/
+__pycache__/
+*.pyc
 
-# Database
-*.sqlite3
+# ENV FILES (DO NOT COMMIT THESE!)
+.env
+.env.local
+.env.production
 
-# Node / Vite
+# But DO commit the example file
+!.env.example
+
+# Frontend
 frontend/node_modules/
 frontend/dist/
-frontend/.vite/
-
-# IDE
-.vscode/
-.idea/
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Logs
-*.log
-
-# Backup files
-*.bak
+frontend/.env.local

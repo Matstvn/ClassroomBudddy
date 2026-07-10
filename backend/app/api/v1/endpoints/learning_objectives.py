@@ -49,9 +49,7 @@ def list_objectives(
         result.append({
             "id": obj.id,
             "description": obj.description,
-            "competency_code": comp.code,
             "competency_description": comp.description,
-            "performance_standard_code": ps.code,
             "performance_standard_description": ps.description
         })
     return result

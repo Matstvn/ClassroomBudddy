@@ -29,3 +29,4 @@ class Student(Base):
     guardian_name: Mapped[str | None] = mapped_column(String(200), nullable=True)
     guardian_contact: Mapped[str | None] = mapped_column(String(20), nullable=True)
     is_active: Mapped[bool] = mapped_column(default=True)
+    reading_level: Mapped[str | None] = mapped_column(String(50), nullable=True, default=None)
