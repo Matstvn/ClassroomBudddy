@@ -13,6 +13,9 @@ import { renderAttendanceSummaryPage } from './modules/reports/pages/attendance-
 import { renderIndividualReportPage } from './modules/reports/pages/individual-report';
 import { renderDashboardPage } from './modules/dashboard/pages/dashboard-page';
 import { renderSettingsPage } from './modules/settings/pages/settings-page';
+import { renderCompetencyDetailPage } from './modules/classroom/pages/competency-detail-page';
+
+// Inside route function:
 
 
 const layout = new MainLayout();
@@ -57,7 +60,9 @@ function route() {
   // Inside route function:
   else if (hash === '/settings') {
       content.appendChild(renderSettingsPage());
-  }
+  }else if (hash.startsWith('/competency/')) {
+    content.appendChild(renderCompetencyDetailPage());
+} 
 
 
   //Insert here
