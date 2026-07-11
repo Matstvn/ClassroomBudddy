@@ -95,7 +95,7 @@ export function renderClassroomPage(): HTMLElement {
 
   // Content area (attendance, lesson, assessment) – shown after subject selected
   const workspace = document.createElement('div');
-  workspace.className = 'flex-1 grid grid-cols-1 lg:grid-cols-2 gap-6';
+  workspace.className = 'flex-1 grid grid-cols-1 lg:grid-cols-2 gap-6 items-start';
   container.appendChild(workspace);
 
   // Default empty state
@@ -399,23 +399,23 @@ async function loadWorkspace(container: HTMLElement, subjectId: number, date: st
   lessonForm.innerHTML = `
     <div class="flex flex-col gap-1">
       <label class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Lesson Title</label>
-      <input name="title" placeholder="Lesson title" value="${lesson?.title || ''}" class="border border-slate-200 p-2.5 rounded-lg text-sm bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all font-medium" />
+      <input name="title" placeholder="Lesson title" value="${lesson?.title || ''}" class="border border-slate-200 p-2.5 rounded-lg text-sm bg-white text-black focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all font-medium" />
     </div>
     <div class="flex flex-col gap-1">
       <label class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Description</label>
-      <textarea name="description" placeholder="Description" class="border border-slate-200 p-2.5 rounded-lg text-sm bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all font-medium" rows="2">${lesson?.description || ''}</textarea>
+      <textarea name="description" placeholder="Description" class="border border-slate-200 p-2.5 rounded-lg text-sm bg-white text-black focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all font-medium" rows="2">${lesson?.description || ''}</textarea>
     </div>
     <div class="flex flex-col gap-1">
       <label class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Competencies</label>
-      <textarea name="competencies" placeholder="Competencies" class="border border-slate-200 p-2.5 rounded-lg text-sm bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all font-medium" rows="2">${lesson?.competencies || ''}</textarea>
+      <textarea name="competencies" placeholder="Competencies" class="border border-slate-200 p-2.5 rounded-lg text-sm bg-white text-black focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all font-medium" rows="2">${lesson?.competencies || ''}</textarea>
     </div>
     <div class="flex flex-col gap-1">
       <label class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Resources</label>
-      <textarea name="resources" placeholder="Resources" class="border border-slate-200 p-2.5 rounded-lg text-sm bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all font-medium" rows="2">${lesson?.resources || ''}</textarea>
+      <textarea name="resources" placeholder="Resources" class="border border-slate-200 p-2.5 rounded-lg text-sm bg-white text-black focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all font-medium" rows="2">${lesson?.resources || ''}</textarea>
     </div>
     <div class="flex flex-col gap-1">
       <label class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Notes</label>
-      <textarea name="notes" placeholder="Notes" class="border border-slate-200 p-2.5 rounded-lg text-sm bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all font-medium" rows="2">${lesson?.notes || ''}</textarea>
+      <textarea name="notes" placeholder="Notes" class="border border-slate-200 p-2.5 rounded-lg text-sm bg-white text-black focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all font-medium" rows="2">${lesson?.notes || ''}</textarea>
     </div>
     <div class="pt-2 border-t flex justify-end">
       <button type="submit" class="bg-emerald-600 hover:bg-emerald-700 text-white font-medium px-4 py-2 rounded-lg text-sm transition-all shadow-sm flex items-center gap-1.5 cursor-pointer">
@@ -476,16 +476,16 @@ function showAssessmentForm(parent: HTMLElement, students: Learner[], subjectId:
     <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
       <div class="flex flex-col gap-1 md:col-span-2">
         <label class="text-[10px] font-semibold text-slate-500 uppercase tracking-wider">Assessment Title</label>
-        <input id="assess-title" placeholder="e.g. Chapter 1 Quiz" class="border border-slate-200 p-2.5 rounded-lg text-sm bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all" />
+        <input id="assess-title" placeholder="e.g. Chapter 1 Quiz" class="border border-slate-200 p-2.5 rounded-lg text-sm bg-white text-black focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all" />
       </div>
       <div class="flex flex-col gap-1">
         <label class="text-[10px] font-semibold text-slate-500 uppercase tracking-wider">Total Max Score</label>
-        <input id="assess-total" type="number" placeholder="Total Score" class="border border-slate-200 p-2.5 rounded-lg text-sm bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all text-center" value="20" />
+        <input id="assess-total" type="number" placeholder="Total Score" class="border border-slate-200 p-2.5 rounded-lg text-sm bg-white text-black focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all text-center" value="20" />
       </div>
     </div>
     <div class="flex flex-col gap-1">
       <label class="text-[10px] font-semibold text-slate-500 uppercase tracking-wider">Assessment Type</label>
-      <select id="assess-type" class="border border-slate-200 p-2.5 rounded-lg text-sm bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all cursor-pointer">
+      <select id="assess-type" class="border border-slate-200 p-2.5 rounded-lg text-sm bg-white text-black focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all cursor-pointer">
         <option value="quiz">Quiz</option>
         <option value="seatwork">Seatwork</option>
         <option value="homework">Homework</option>
@@ -499,7 +499,7 @@ function showAssessmentForm(parent: HTMLElement, students: Learner[], subjectId:
         ${students.map(s => `
           <div class="flex items-center justify-between gap-3 p-2 bg-white rounded-lg border border-slate-100 shadow-xs">
             <span class="text-xs font-semibold text-slate-700 truncate">${s.last_name}, ${s.first_name}</span>
-            <input type="number" class="border border-slate-200 w-16 p-1 rounded text-center text-xs focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500" data-student="${s.id}" min="0" max="999" value="0" />
+            <input type="number" class="border border-slate-200 w-16 p-1 rounded text-center text-xs bg-white text-black focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500" data-student="${s.id}" min="0" max="999" value="0" />
           </div>
         `).join('')}
       </div>

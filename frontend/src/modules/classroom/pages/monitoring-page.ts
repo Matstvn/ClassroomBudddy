@@ -28,7 +28,7 @@ export function renderMonitoringPage(): HTMLElement {
 
   const titleArea = document.createElement('div');
   titleArea.innerHTML = `
-    <h1 class="text-xl font-bold text-slate-850">Curriculum Progress Monitoring</h1>
+    <h1 class="text-xl font-bold text-slate-850 text-black">Curriculum Progress Monitoring</h1>
     <p class="text-xs text-slate-500">Track and manage learning competency coverage and student achievement averages</p>
   `;
   headerRow.appendChild(titleArea);
@@ -149,8 +149,7 @@ export function renderMonitoringPage(): HTMLElement {
       psHeader.innerHTML = `
         <div class="bg-indigo-50 border border-indigo-100 px-2 py-0.5 rounded text-[10px] font-bold text-indigo-700 mt-0.5 uppercase tracking-wider">Standard</div>
         <div class="flex flex-col">
-          <h3 class="font-bold text-slate-800 text-sm">${ps.code}</h3>
-          <p class="text-xs text-slate-500 font-medium">${ps.description}</p>
+          <p class="text-sm text-slate-700 font-medium">${ps.description}</p>
         </div>
       `;
       psDiv.appendChild(psHeader);
@@ -180,7 +179,6 @@ export function renderMonitoringPage(): HTMLElement {
         compHeader.className = 'flex flex-col sm:flex-row sm:items-start justify-between gap-3 border-b border-slate-50 pb-2.5';
         compHeader.innerHTML = `
           <div class="flex flex-col gap-1">
-            <span class="text-[10px] font-bold text-indigo-650 tracking-wide">${comp.code}</span>
             <span class="font-semibold text-slate-700 text-sm leading-relaxed">${comp.description}</span>
           </div>
           <div class="flex flex-col items-end gap-1 shrink-0">
@@ -205,7 +203,7 @@ export function renderMonitoringPage(): HTMLElement {
         compDiv.appendChild(objTitle);
 
         const objList = document.createElement('div');
-        objList.className = 'grid grid-cols-1 md:grid-cols-2 gap-3 pl-1';
+        objList.className = 'grid grid-cols-1 md:grid-cols-2 gap-3 pl-1 text-black';
         
         comp.objectives.forEach(obj => {
           const card = document.createElement('div');
@@ -223,7 +221,6 @@ export function renderMonitoringPage(): HTMLElement {
           
           card.innerHTML = `
             <div class="flex flex-col gap-0.5">
-              <span class="text-[9px] font-bold text-indigo-500 uppercase tracking-wider">${obj.code}</span>
               <span class="text-xs font-semibold text-slate-650 leading-relaxed">${obj.description}</span>
             </div>
             <div class="text-right shrink-0">
@@ -270,11 +267,11 @@ export function renderMonitoringPage(): HTMLElement {
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
         <div class="flex flex-col gap-1">
           <label class="text-[9px] font-semibold text-slate-500 uppercase tracking-wider">Objective Code</label>
-          <input id="obj-code" placeholder="e.g., LO-1a" class="border border-slate-200 p-2 rounded-lg text-xs bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all font-medium" />
+          <input id="obj-code" placeholder="e.g., LO-1a" class="border border-slate-200 p-2 rounded-lg text-xs bg-white text-black focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all font-medium" />
         </div>
         <div class="flex flex-col gap-1 sm:col-span-2">
           <label class="text-[9px] font-semibold text-slate-500 uppercase tracking-wider">Objective Description</label>
-          <input id="obj-desc" placeholder="Enter objective details..." class="border border-slate-200 p-2 rounded-lg text-xs bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all font-medium" />
+          <input id="obj-desc" placeholder="Enter objective details..." class="border border-slate-200 p-2 rounded-lg text-xs bg-white text-black focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all font-medium" />
         </div>
       </div>
       <div class="pt-2 border-t border-indigo-100/50 flex justify-end gap-2">

@@ -7,6 +7,9 @@ import { renderComputedGradesPage } from './modules/grades/pages/computed-grade-
 import { renderMonitoringPage } from './modules/classroom/pages/monitoring-page';
 import { renderDailyLogPage } from './modules/daily-log/pages/daily-log-pages';
 import { renderReadingPage } from './modules/reading/pages/reading-page';
+import { renderToolsPage } from './modules/tools/pages/tools-page';
+import { renderGradeSheetPage } from './modules/reports/pages/grade-sheet';
+import { renderAttendanceSummaryPage } from './modules/reports/pages/attendance-summary';
 
 
 
@@ -32,10 +35,20 @@ function route() {
     } else if (hash === '/classroom') {
       content.appendChild(renderMonitoringPage());
     } 
-    // Inside your route function:
    else if (hash === '/reading') {
     content.appendChild(renderReadingPage());
-  }else {
+  }else if (hash === '/tools') {
+    content.appendChild(renderToolsPage());
+  } else if (hash === '/reports/grade-sheet') {
+    content.appendChild(renderGradeSheetPage());
+  }// inside route function:
+  else if (hash === '/reports/attendance-summary') {
+    content.appendChild(renderAttendanceSummaryPage());
+  }
+
+
+  //Insert here
+  else {
       content.innerHTML = '<div class="p-8 text-gray-500">Page not found.</div>';
     }
   } catch (err) {

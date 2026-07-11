@@ -14,7 +14,7 @@ function getCurrentTerm(): number {
 
 function isAM(): boolean {
   const h = new Date().getHours();
-  return h >= 7 && h < 12;
+  return true;//h >= 7 && h < 12;
 }
 
 function isPM(): boolean {
