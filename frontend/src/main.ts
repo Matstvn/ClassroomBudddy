@@ -10,7 +10,9 @@ import { renderReadingPage } from './modules/reading/pages/reading-page';
 import { renderToolsPage } from './modules/tools/pages/tools-page';
 import { renderGradeSheetPage } from './modules/reports/pages/grade-sheet';
 import { renderAttendanceSummaryPage } from './modules/reports/pages/attendance-summary';
-
+import { renderIndividualReportPage } from './modules/reports/pages/individual-report';
+import { renderDashboardPage } from './modules/dashboard/pages/dashboard-page';
+import { renderSettingsPage } from './modules/settings/pages/settings-page';
 
 
 const layout = new MainLayout();
@@ -21,7 +23,7 @@ function route() {
   const content = layout.getContentArea();
   content.innerHTML = '';
 
-  const hash = window.location.hash.slice(1) || '/daily-log';
+  const hash = window.location.hash.slice(1) || '/dashboard';// default changed
 
   try {
     if (hash === '/daily-log') {
@@ -44,6 +46,17 @@ function route() {
   }// inside route function:
   else if (hash === '/reports/attendance-summary') {
     content.appendChild(renderAttendanceSummaryPage());
+  }
+    // inside route function:
+  else if (hash === '/reports/individual') {
+      content.appendChild(renderIndividualReportPage());
+  }
+  else if (hash === '/dashboard' || hash === '/') {
+    content.appendChild(renderDashboardPage());
+  }
+  // Inside route function:
+  else if (hash === '/settings') {
+      content.appendChild(renderSettingsPage());
   }
 
 

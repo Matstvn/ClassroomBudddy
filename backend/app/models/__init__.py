@@ -11,3 +11,4 @@ from .content_standard import ContentStandard
 from .performance_standard import PerformanceStandard
 from .learning_competency import LearningCompetency
 from .learning_objective import LearningObjective
+from .app_settings import AppSettings

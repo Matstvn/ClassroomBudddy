@@ -13,9 +13,7 @@ import app.api.v1.endpoints.grades as grades
 import app.api.v1.endpoints.curriculum as curriculum
 import app.api.v1.endpoints.learning_objectives as learning_objectives
 import app.api.v1.endpoints.reading as reading
-
-
-
+import app.api.v1.endpoints.settings as setting
 
 
 app = FastAPI(title=settings.APP_NAME)
@@ -69,6 +67,12 @@ app.include_router(
     curriculum.router,
     prefix=f"{settings.API_V1_PREFIX}/curriculum",
     tags=["curriculum"]
+)
+
+app.include_router(
+    setting.router,
+    prefix=f"{settings.API_V1_PREFIX}/settings",
+    tags=["settings"]
 )
 
 app.include_router(

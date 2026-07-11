@@ -12,7 +12,7 @@ interface CompetencyNode {
 
 interface ProgressData {
   performance_standards: {
-    id: number; code: string; description: string;
+    description: string;
     competencies: CompetencyNode[];
   }[];
 }
@@ -265,10 +265,7 @@ export function renderMonitoringPage(): HTMLElement {
         <h5 class="font-bold text-slate-700 text-xs">New Objective</h5>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
-        <div class="flex flex-col gap-1">
-          <label class="text-[9px] font-semibold text-slate-500 uppercase tracking-wider">Objective Code</label>
-          <input id="obj-code" placeholder="e.g., LO-1a" class="border border-slate-200 p-2 rounded-lg text-xs bg-white text-black focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all font-medium" />
-        </div>
+      
         <div class="flex flex-col gap-1 sm:col-span-2">
           <label class="text-[9px] font-semibold text-slate-500 uppercase tracking-wider">Objective Description</label>
           <input id="obj-desc" placeholder="Enter objective details..." class="border border-slate-200 p-2 rounded-lg text-xs bg-white text-black focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all font-medium" />
